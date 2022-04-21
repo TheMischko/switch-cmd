@@ -1,0 +1,19 @@
+# Get root
+GET localhost:8080/posts
+
+###
+
+# Get post with id 1
+GET localhost:8080/posts/1
+
+###
+
+# Add new post
+POST localhost:8080/posts/add
+Content-Type: application/json
+
+{
+  "title": "Test post"
+}
+
+###
