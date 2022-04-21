@@ -3,10 +3,30 @@
   "version": "0.0.1",
   "description": "Content management system based on Express.js and Vue.js",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cms", "javascript", "vue", "express", "js", "content management system"],
+  "keywords": [
+    "cms",
+    "javascript",
+    "vue",
+    "express",
+    "js",
+    "content management system"
+  ],
   "author": "Michal Dvorak",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.6"
+  }
 }
