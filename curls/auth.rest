@@ -1,0 +1,18 @@
+GET localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "Tonda",
+  "password": ""
+}
+
+###
+
+PUT http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+  "username": "tonda",
+  "email": "tonda@test.cz",
+  "password": ""
+}
