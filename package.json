@@ -1,0 +1,12 @@
+{
+  "name": "switch-cms",
+  "version": "0.0.1",
+  "description": "Content management system based on Express.js and Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cms", "javascript", "vue", "express", "js", "content management system"],
+  "author": "Michal Dvorak",
+  "license": "ISC"
+}
