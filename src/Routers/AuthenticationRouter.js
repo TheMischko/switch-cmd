@@ -37,13 +37,19 @@ router.put("/register", async (req, res) => {
     const date = new Date();
     const password = await passwordHash(req.body.password, date.getMilliseconds().toString());
     const user = await User.query().insert({
-        username: req.body.username ?? "",
+        login: req.body.username ?? "",
         password: password,
         email: req.body.email
     });
 
     const accessToken = createToken(user.toJSON());
     res.json({accessToken: accessToken});
+});
+
+router.get("/allUsers", async (req, res) => {
+    const users = await User.query();
+    const role = await users[0].$relatedQuery('roles');
+    res.send([users[0], role]);
 });
 
 export default router;

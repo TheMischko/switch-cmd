@@ -37,13 +37,19 @@ DROP TABLE IF EXISTS `6FrrJZwxhZ`.`post` ;
 
 CREATE TABLE IF NOT EXISTS `6FrrJZwxhZ`.`post` (
   `id` INT NOT NULL,
-  `title` VARCHAR(45) NULL,
-  `slug` VARCHAR(45) NULL,
-  `shortText` VARCHAR(45) NULL,
-  `longText` VARCHAR(45) NULL,
-  `mainImage` VARCHAR(45) NULL,
-  `gallery` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
+  `title` VARCHAR(32) NULL,
+  `slug` VARCHAR(48) NULL,
+  `shortText` VARCHAR(255) NULL,
+  `longText` TEXT NULL,
+  `gallery_id` INT UNSIGNED NULL,
+  `image_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_post_image1_idx` (`image_id` ASC) VISIBLE,
+  CONSTRAINT `fk_post_image1`
+    FOREIGN KEY (`image_id`)
+    REFERENCES `6FrrJZwxhZ`.`image` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 

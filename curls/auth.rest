@@ -16,3 +16,8 @@ Content-Type: application/json
   "email": "tonda@test.cz",
   "password": ""
 }
+
+###
+
+# Get all users
+GET localhost:8080/auth/allUsers

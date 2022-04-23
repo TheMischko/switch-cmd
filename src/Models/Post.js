@@ -14,12 +14,25 @@ export default class extends Model {
             type: 'object',
             properties: {
                 id: {type: 'integer'},
-                title: {type: 'string'}
+                title: {type: 'string'},
+                slug: {type: 'string'},
+                shortText: {type: 'string'},
+                longText: {type: 'string'},
+                mainImage: {type: 'string'}
             }
         }
     }
 
     static get relationMappings() {
-        return {}
+        return {
+            hasMainImage: {
+                relation: Model.HasOneRelation,
+                modelClass: Image,
+                join: {
+                    from: 'post.image_id',
+                    to: 'image.id'
+                }
+            }
+        }
     }
 }

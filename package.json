@@ -35,5 +35,11 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.25"
+  },
+  "nodemonConfig": {
+    "colours": true,
+    "ignore": [
+      "admin/*"
+    ]
   }
 }
